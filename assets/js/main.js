@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const payoutAmount = window.generatedPayoutAmount || "$0.00";
 
       const template = new Image();
-      template.src = 'assets/images/template.png';
+      template.src = 'assets/images/ST_template.png';
 
       const uploaded = new Image();
       uploaded.src = URL.createObjectURL(uploadInput.files[0]);

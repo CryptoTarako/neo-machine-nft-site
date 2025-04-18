@@ -37,19 +37,41 @@ input[type="text"] {
   font-size: 1rem;
 }
 
-/* ボタンスタイル */
+/* ボタン全体のスタイル */
 button {
-  padding: 10px 20px;
-  background-color: orange;
-  color: #000;
-  border: none;
-  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 14px;
   font-weight: bold;
+  border-radius: 20px;
+  border: none;
   cursor: pointer;
+  background-color: #00ff00; /* ネオン感のあるグリーン */
+  color: white;
+  box-shadow: 0px 2px 7px rgba(21, 216, 21, 0.75); /* ネオン風の影 */
+  transition: all 0.8s ease;
+  animation: neonPulse 5s ease-in-out infinite; /* グラデーションのアニメーション */
 }
 
 button:hover {
-  background-color: #ffa500;
+  background-color: #00cc00; /* 少し暗くして強調 */
+  transform: scale(1.1); /* ボタンを少し大きく */
+  box-shadow: 0px 6px 20px rgba(0, 255, 0, 1); /* ホバー時に影を強調 */
+}
+
+/* ネオン風のアニメーション */
+@keyframes neonPulse {
+  0% {
+    background-color: #00ff00; /* 初期状態 */
+    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    background-color: #00cc00; /* 少しダークグリーンに */
+    box-shadow: 0px 6px 25px rgba(0, 255, 0, 1); /* 影を大きく、濃く */
+  }
+  100% {
+    background-color: #00ff00; /* 元に戻す */
+    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.7);
+  }
 }
 
 /* テーブル（NFT保有） */
@@ -126,11 +148,6 @@ button:hover {
   margin-top: 40px;
 }
 
-#image-generator h2 {
-  color: #c6ff00;
-  font-size: 1.3rem;
-}
-
 #uploadImage {
   margin-top: 10px;
 }
@@ -170,4 +187,50 @@ canvas#resultCanvas {
   color: #c6ff00;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+/* 戻るボタン */
+.return-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4e6e3b; /* 落ち着いた色（ダークグリーン系） */
+  color: white; /* 白い文字色 */
+  padding: 12px 24px; /* ボタンの内側の余白 */
+  font-size: 14px; /* 少し小さめのフォント */
+  font-weight: bold; /* 太字 */
+  border-radius: 20px; /* 丸い角 */
+  border: none; /* ボーダー無し */
+  box-shadow: none; /* 影無し */
+  transition: all 0.3s ease; /* ホバー時のアニメーション */
+  cursor: pointer; /* カーソルが指の形に変わる */
+}
+
+.return-button:hover {
+  background-color: #3e5c2b; /* ホバー時に色が少し暗くなる */
+  transform: translateY(-3px); /* 少し浮き上がる */
+  box-shadow: none; /* 影無し */
+}
+
+/* ホームボタンのデザイン */
+.home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  background-color: #00ff00; /* 緑色 */
+  color: white; /* 白い文字色 */
+  padding: 12px 24px; /* ボタンの内側の余白 */
+  font-size: 14px; /* 少し小さめのフォント */
+  font-weight: bold; /* 太字 */
+  border-radius: 20px; /* 丸い角 */
+  border: none; /* ボーダー無し */
+  box-shadow: 0px 4px 12px rgba(0, 255, 0, 0.3); /* 影 */
+  transition: all 0.3s ease; /* ホバー時のアニメーション */
+  cursor: pointer; /* カーソルが指の形に変わる */
+}
+
+.home-button:hover {
+  background-color: #00cc00; /* 少し暗くして強調 */
+  transform: translateY(-3px); /* 少し浮き上がる */
+  box-shadow: 0px 6px 18px rgba(0, 255, 0, 0.4); /* 影を強調 */
 }
