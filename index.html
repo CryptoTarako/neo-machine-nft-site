@@ -1,45 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STABLE TOKEN POOL</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO MACHINE NFT</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>STABLE TOKEN POOL</h1>
-
-    <!-- ウォレットアドレス入力フォーム -->
-    <form id="walletForm">
-      <label for="walletAddress">ウォレットアドレスを入力してください：</label>
-      <input type="text" id="walletAddress" required>
-      <button type="submit">実行</button>
-    </form>
-
-    <!-- 結果表示 -->
-    <div id="result"></div>
-
-    <!-- 画像生成セクション（初期は非表示） -->
-    <div id="image-generator" style="display: none;">
-      <h2>画像生成</h2>
-      <p>SNSプロフ画像をアップロードしてください。（正方形推奨）</p>
-      <input type="file" id="uploadImage" accept="image/*">
-      <button id="generateBtn">画像生成</button>
-      <div class="canvas-wrapper">
-        <canvas id="resultCanvas" width="2000" height="2000"></canvas>
-      </div>
-      <a id="downloadBtn" href="#" download="payout.png" style="display: none;">画像をダウンロード</a>
+    <div class="container">
+        <h1>NEO MACHINE NFT Checker</h1>
+        <div class="buttons">
+            <button onclick="window.location.href='stable.html'">STABLE TOKEN POOL</button>
+            <button onclick="window.location.href='sponsor.html'">SPONSOR TOKEN POOL</button>
+        </div>
     </div>
-  </div>
-
-  <script src="assets/libs/ethers.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>  
-  <script>
-    let payoutAmount = null; // ← グローバルで保持
-  </script>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
