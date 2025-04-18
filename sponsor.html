@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPONSOR TOKEN POOL</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>SPONSOR TOKEN POOL</h1>
+
+    <!-- トップページに戻るリンク -->
+    <a href="index.html">トップページに戻る</a>
+
+    <!-- ウォレットアドレス入力フォーム -->
+    <form id="walletForm">
+      <label for="walletAddress">ウォレットアドレスを入力してください：</label>
+      <input type="text" id="walletAddress" required>
+      <button type="submit">実行</button>
+    </form>
+
+    <!-- 結果表示 -->
+    <div id="result"></div>
+
+  </div>
+  
+  <script>
+    document.getElementById('walletForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const address = document.getElementById('walletAddress').value.trim().toLowerCase();
+      const resultDiv = document.getElementById('result');
+      
+      // スポンサートークンのアドレスリスト
+      const tokenAddresses = {
+        "0xd62D284e404ADe4F76DD7095a135639Fe953D331": 4501,
+        "0x2c5A4eC04634586D1fA102F23513b4Bcc660eaed": 3800,
+        "0x46C1794Df805bfb5761726C60a8148158Dab87e2": 1000,
+        "0xdDd5DfDD395eeeFfcFeeE0EA1434aAb52083daF1": 200,
+        "0x2BB43FF4663a4209e66222F2320537B4bfdcB693": 178,
+        "0xB40f0e7B8EC9Ef24bbB8679639205C45B2C8B8A9": 135,
+        "0x616dda6cd3db657D03cBe1b03f0f263E50B6eC39": 100,
+        "0x45272673E7CAb4fdD2614d6A61a22032A7c2D594": 100,
+        "0x48156b2593B4C271436097eb6030DB2451A1136B": 76,
+        "0x9c0F9A4A14C0e6E7D3a2EF084aef986f588da6E5": 63,
+        "0x79b674980154E579F194FeDA61CFB6C1Dd789359": 28,
+        "0x41B215f987Ebbfa874a4B03D401e02cBa4D077ec": 10,
+        "0x457f906e2aA73dC419b3dCfC755a96A4bd2CB174": 6,
+        "0xC048226670753063491bA4cF9bfFA4E23585DFdf": 4,
+        "0x6167F1bf679Cf30d8025c49510Cf9214b9bb3207": 4,
+        "0xfB151573c45Ce7815f0BFB1398A9a0a443380141": 3,
+        "0xe7c6bC490a8c677c8E672ed37F7Ad617D89D5a89": 3,
+        "0x91aA9DbB3b6eef71F2e9C53385Db39b8Fa0D8E3f": 3,
+        "0x87b5C038028464AA39895c11a745e16468997683": 3,
+        "0x8078C53c405AbC6617Cc3191D94427BbFA97390d": 3,
+        "0x7897cB28773de2f0aDe160Ebff179Dc63cB88D9A": 3,
+        "0x678a2fc326dEE5d986C48Ee75992F784Ab3a561c": 3,
+        "0x631164e2885E69F87e517d45bB0242D8d0102dDd": 3,
+        "0x05B76497F569918195f1703118B3E305F6dF5eDB": 3,
+        "0xff84c601FE895d3958CCFaECC16ff55dC983bBA6": 2,
+        "0xF8974a77386B37D371cc8dDd259F18D9dA422a28": 2,
+        "0xDaD8528b1Ddb50747fEc21c9058Ee8aF7377600a": 2,
+        "0x9530E4aBBe3757Fc602d4DA3D606DB8a9Ae5982D": 2,
+        "0x7241D7E32E5d7f1ac699293bD4f8433389F65bc7": 2,
+        "0x12d360bFac45Ca6F233D6559980F68307C3371aF": 2,
+        "0xf636fb7054a7D39C2e96712E8EF85aF3B6E452Ed": 1,
+        "0xF516Eeb43251C623b0275E3257B38cCBAFEE0e83": 1,
+        "0xf411d1a44b5EAB5b395855a8077544521e262B79": 1,
+        "0xf406aed3369614123eB6c8ea6afB12995D49dBdB": 1,
+        "0xF09ca3AFF498b585477dCa8F5c99BcA3f978609e": 1,
+        "0xEB09bB362247d83a95762e39C129D80EC32Dd94c": 1,
+        "0xE64218D357919046995F904654950a5D5342b978": 1,
+        "0xE34852d2735E90e02F3f75B74d60765eD32AD2E7": 1,
+        "0xDB6b79580171A7250bd8B1dC12138A6b689D9Ea2": 1,
+        "0xd43C752f78964DBc17C416aa7651BCEA020Cec73": 1,
+        "0xd22A63844915066Bb8FFdf2cffd66876089e6025": 1,
+        "0xCf53e590bbd4d54E9839246D77542f80635255f4": 1,
+        "0xcdDCe70fD894e38648920Bf45d6B350e543dae6B": 1,
+        "0xBFe33Fa265aF9B73441b37A05c7D48B2fCf37D88": 1,
+        "0xbB7d2Ac297E168a3b9eAe331fB6AFa36093420A3": 1,
+        "0xb3c824d2f08a7f3C8cAb60C47eB5b3d9394934c0": 1,
+        "0xA37f05806587eaEE70C23173E108277C50c0b28a": 1,
+        "0x9bd7B0bd0Afdba4128EA17FaB6680806896521A2": 1,
+        "0x81CAb73dee0536E86c9CcEF2a28a2dc3856B91BE": 1,
+        "0x6EC3Db0E688d4CF41Ae4542558C653e3642bEd01": 1,
+        "0x596207C2B35B8C6cdc1c06B8a9419bFf5126268d": 1,
+        "0x53D7bde814fc3d1e3EBF2ceb03410FDbcC911908": 1,
+        "0x4f4d74826c910e4621C465f09bD4373C6cD3d5fC": 1,
+        "0x4E3b3680BbaF5b6eE805E4606a772C5A112723c3": 1,
+        "0x470027d8DC30eF5f4F01c79daB20ad2068859D27": 1,
+        "0x3e56E009a7E914D54d67A86b7b520BDd20489328": 1,
+        "0x3e45C12573fb8264F4475e7a22FB8DF8897D1677": 1,
+        "0x3Ae3B9372f39990C556Ee348424745095fa02814": 1,
+        "0x379b851509831C3284a1cf0fcCA549e7891b45Ed": 1,
+        "0x2B01996bed76F0b30444339feebc57d3EdD40aDe": 1,
+        "0x2A5CcbBE7DdCB004406a564302eFB8F754ddfd3E": 1,
+        "0x27a2AdC97246eC7580388bF20d19f889d56388e9": 1,
+        "0x26b1c8332127A0Da7a95144B63cBBB5C735Aac2D": 1,
+        "0x22db0Cd740f1c2C7104d8936c4c0208361Cf7ad3": 1,
+        "0x0Ff05CE169Da816f6ce2F8F3ad229Bc4D9ea46Ab": 1,
+        "0x0cd6DB7B57D6D942955E70Bc0237532f0E75600f": 1
+      };
+
+      // 結果が存在する場合、応募金額と賞金額を計算
+      if (tokenAddresses[address]) {
+        const entryCount = tokenAddresses[address];
+        const entryAmount = entryCount * 5; // 応募金額 = 応募口数 × 5
+        const prizeAmount = entryAmount * 1.05; // 賞金額 = 応募金額 × 1.05
+
+        resultDiv.innerHTML = `
+          <h2>応募金額と賞金額</h2>
+          <p>応募口数: ${entryCount}</p>
+          <p>応募金額: $${entryAmount}</p>
+          <p>賞金額: $${prizeAmount.toFixed(2)}</p>
+        `;
+      } else {
+        resultDiv.innerHTML = `<p>スポンサートークン枠の応募が見当たりません。</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
