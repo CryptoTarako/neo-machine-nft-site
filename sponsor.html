@@ -30,7 +30,7 @@
     document.getElementById('walletForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const address = document.getElementById('walletAddress').value.trim().toLowerCase();
+      const address = document.getElementById('walletAddress').value.trim();
       const resultDiv = document.getElementById('result');
       
       // スポンサートークンのアドレスリスト
@@ -102,6 +102,9 @@
         "0x0Ff05CE169Da816f6ce2F8F3ad229Bc4D9ea46Ab": 1,
         "0x0cd6DB7B57D6D942955E70Bc0237532f0E75600f": 1
       };
+
+        console.log('入力されたアドレス:', address);
+        console.log('アドレスリスト:', tokenAddresses);
 
       // 結果が存在する場合、応募金額と賞金額を計算
       if (tokenAddresses[address]) {
