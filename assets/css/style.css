@@ -23,7 +23,31 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* ラベルと入力欄 */
+/* ボタン配置 */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 60%;
+}
+
+button:hover {
+  background-color: #ffa500;
+}
+
+/* 入力欄とボタン */
 label {
   font-size: 1rem;
 }
@@ -35,21 +59,6 @@ input[type="text"] {
   border: none;
   border-radius: 4px;
   font-size: 1rem;
-}
-
-/* ボタンスタイル */
-button {
-  padding: 10px 20px;
-  background-color: orange;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #ffa500;
 }
 
 /* テーブル（NFT保有） */
@@ -87,14 +96,6 @@ button:hover {
 }
 .nft-table td:last-child {
   text-align: right;
-}
-
-/* 勝ち・負け色 */
-.has-token {
-  background-color: #2c2c2c;
-}
-.no-token {
-  background-color: #1a1a1a;
 }
 
 /* 払戻金セクション */
@@ -149,25 +150,4 @@ button:hover {
 
 #downloadBtn:hover {
   background-color: #32cd32;
-}
-
-/* キャンバスをコンパクトに見せる */
-.canvas-wrapper {
-  text-align: center;
-  margin-top: 20px;
-}
-
-canvas#resultCanvas {
-  width: 400px; /* 表示サイズだけ小さく */
-  height: auto;
-  border: 1px solid #666;
-  background-color: #000;
-  border-radius: 6px;
-}
-
-.section-title {
-  font-size: 1.3rem;
-  color: #c6ff00;
-  font-weight: bold;
-  margin-bottom: 10px;
 }
