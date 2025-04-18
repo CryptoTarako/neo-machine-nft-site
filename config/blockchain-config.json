@@ -1,0 +1,13 @@
+{
+    "rpcUrl": "https://bsc.blockrazor.xyz",
+    "chainId": 56,
+    "contractAddress": "0x5c2e043f849E90F19FAb70FC1B02B816F882c229",
+    "tokenIds": {
+      "DAMD PANK": 1,
+      "PEAKY PHANTOM": 2,
+      "NEBULAROCKETS": 3,
+      "Ξ V Ξ R": 4,
+      "OVERDRIVE": 5
+    }
+  }
+  

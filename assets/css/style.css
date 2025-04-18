@@ -1,0 +1,173 @@
+/* 共通設定 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
+/* コンテナ */
+.container {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+
+/* タイトル */
+h1 {
+  text-align: center;
+  color: #adff2f;
+  margin-bottom: 20px;
+}
+
+/* ラベルと入力欄 */
+label {
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 16px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* ボタンスタイル */
+button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffa500;
+}
+
+/* テーブル（NFT保有） */
+.nft-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nft-table thead {
+  background-color: #111;
+}
+
+.nft-table th, .nft-table td {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+.nft-table th {
+  text-align: left;
+  color: #adff2f;
+  border-bottom: 1px solid #444;
+}
+
+.nft-table td {
+  border-bottom: 1px solid #444;
+}
+
+/* 左右寄せ */
+.nft-table td:first-child {
+  text-align: left;
+}
+.nft-table td:last-child {
+  text-align: right;
+}
+
+/* 勝ち・負け色 */
+.has-token {
+  background-color: #2c2c2c;
+}
+.no-token {
+  background-color: #1a1a1a;
+}
+
+/* 払戻金セクション */
+#payoutInfo {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #2b2b2b;
+  border-radius: 8px;
+}
+
+#payoutInfo h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#payoutInfo strong {
+  color: #fff;
+}
+
+#payoutInfo .highlight {
+  color: #adff2f;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* アップローダー */
+#image-generator {
+  margin-top: 40px;
+}
+
+#image-generator h2 {
+  color: #c6ff00;
+  font-size: 1.3rem;
+}
+
+#uploadImage {
+  margin-top: 10px;
+}
+
+#downloadBtn {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: limegreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#downloadBtn:hover {
+  background-color: #32cd32;
+}
+
+/* キャンバスをコンパクトに見せる */
+.canvas-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+canvas#resultCanvas {
+  width: 400px; /* 表示サイズだけ小さく */
+  height: auto;
+  border: 1px solid #666;
+  background-color: #000;
+  border-radius: 6px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #c6ff00;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
