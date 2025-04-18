@@ -37,7 +37,7 @@ input[type="text"] {
   font-size: 1rem;
 }
 
-/* ボタン全体のスタイル（目立つデザイン） */
+/* ボタン全体のスタイル */
 button {
   padding: 12px 24px;
   font-size: 14px;
@@ -55,6 +55,121 @@ button:hover {
   background-color: #1f8e3f; /* 少し暗くして強調 */
   transform: scale(1.05); /* ボタンを少し大きく */
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.8); /* 影を強調 */
+}
+
+/* テーブル（NFT保有） */
+.nft-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nft-table thead {
+  background-color: #111;
+}
+
+.nft-table th, .nft-table td {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+.nft-table th {
+  text-align: left;
+  color: #adff2f;
+  border-bottom: 1px solid #444;
+}
+
+.nft-table td {
+  border-bottom: 1px solid #444;
+}
+
+/* 左右寄せ */
+.nft-table td:first-child {
+  text-align: left;
+}
+.nft-table td:last-child {
+  text-align: right;
+}
+
+/* 勝ち・負け色 */
+.has-token {
+  background-color: #2c2c2c;
+}
+.no-token {
+  background-color: #1a1a1a;
+}
+
+/* 払戻金セクション */
+#payoutInfo {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #2b2b2b;
+  border-radius: 8px;
+}
+
+#payoutInfo h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#payoutInfo strong {
+  color: #fff;
+}
+
+#payoutInfo .highlight {
+  color: #adff2f;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* アップローダー */
+#image-generator {
+  margin-top: 40px;
+}
+
+#uploadImage {
+  margin-top: 10px;
+}
+
+#downloadBtn {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: limegreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#downloadBtn:hover {
+  background-color: #32cd32;
+}
+
+/* キャンバスをコンパクトに見せる */
+.canvas-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+canvas#resultCanvas {
+  width: 400px; /* 表示サイズだけ小さく */
+  height: auto;
+  border: 1px solid #666;
+  background-color: #000;
+  border-radius: 6px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #c6ff00;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* 戻るボタン */
