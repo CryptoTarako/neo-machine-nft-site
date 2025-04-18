@@ -37,7 +37,7 @@ input[type="text"] {
   font-size: 1rem;
 }
 
-/* ボタン全体のスタイル */
+/* ボタン全体のスタイル（目立つデザイン） */
 button {
   padding: 12px 24px;
   font-size: 14px;
@@ -45,148 +45,16 @@ button {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  background-color: #00ff00; /* ネオン感のあるグリーン */
+  background-color: #1db954; /* スタイリッシュなグリーン */
   color: white;
-  box-shadow: 0px 2px 7px rgba(21, 216, 21, 0.75); /* ネオン風の影 */
-  transition: all 0.8s ease;
-  animation: neonPulse 5s ease-in-out infinite; /* グラデーションのアニメーション */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6); /* 落ち着いた影 */
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #00cc00; /* 少し暗くして強調 */
-  transform: scale(1.1); /* ボタンを少し大きく */
-  box-shadow: 0px 6px 20px rgba(0, 255, 0, 1); /* ホバー時に影を強調 */
-}
-
-/* ネオン風のアニメーション */
-@keyframes neonPulse {
-  0% {
-    background-color: #00ff00; /* 初期状態 */
-    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.7);
-  }
-  50% {
-    background-color: #00cc00; /* 少しダークグリーンに */
-    box-shadow: 0px 6px 25px rgba(0, 255, 0, 1); /* 影を大きく、濃く */
-  }
-  100% {
-    background-color: #00ff00; /* 元に戻す */
-    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.7);
-  }
-}
-
-/* テーブル（NFT保有） */
-.nft-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background-color: #333;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.nft-table thead {
-  background-color: #111;
-}
-
-.nft-table th, .nft-table td {
-  padding: 8px 12px;
-  font-size: 0.95rem;
-}
-
-.nft-table th {
-  text-align: left;
-  color: #adff2f;
-  border-bottom: 1px solid #444;
-}
-
-.nft-table td {
-  border-bottom: 1px solid #444;
-}
-
-/* 左右寄せ */
-.nft-table td:first-child {
-  text-align: left;
-}
-.nft-table td:last-child {
-  text-align: right;
-}
-
-/* 勝ち・負け色 */
-.has-token {
-  background-color: #2c2c2c;
-}
-.no-token {
-  background-color: #1a1a1a;
-}
-
-/* 払戻金セクション */
-#payoutInfo {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #2b2b2b;
-  border-radius: 8px;
-}
-
-#payoutInfo h2 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-#payoutInfo strong {
-  color: #fff;
-}
-
-#payoutInfo .highlight {
-  color: #adff2f;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* アップローダー */
-#image-generator {
-  margin-top: 40px;
-}
-
-#uploadImage {
-  margin-top: 10px;
-}
-
-#downloadBtn {
-  display: none;
-  margin-top: 20px;
-  padding: 10px 18px;
-  background-color: limegreen;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#downloadBtn:hover {
-  background-color: #32cd32;
-}
-
-/* キャンバスをコンパクトに見せる */
-.canvas-wrapper {
-  text-align: center;
-  margin-top: 20px;
-}
-
-canvas#resultCanvas {
-  width: 400px; /* 表示サイズだけ小さく */
-  height: auto;
-  border: 1px solid #666;
-  background-color: #000;
-  border-radius: 6px;
-}
-
-.section-title {
-  font-size: 1.3rem;
-  color: #c6ff00;
-  font-weight: bold;
-  margin-bottom: 10px;
+  background-color: #1f8e3f; /* 少し暗くして強調 */
+  transform: scale(1.05); /* ボタンを少し大きく */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.8); /* 影を強調 */
 }
 
 /* 戻るボタン */
@@ -217,20 +85,20 @@ canvas#resultCanvas {
   position: fixed;
   bottom: 20px;
   right: 100px;
-  background-color: #00ff00; /* 緑色 */
+  background-color: #ff6600; /* 明るいオレンジ */
   color: white; /* 白い文字色 */
   padding: 12px 24px; /* ボタンの内側の余白 */
   font-size: 14px; /* 少し小さめのフォント */
   font-weight: bold; /* 太字 */
   border-radius: 20px; /* 丸い角 */
   border: none; /* ボーダー無し */
-  box-shadow: 0px 4px 12px rgba(0, 255, 0, 0.3); /* 影 */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6); /* 影 */
   transition: all 0.3s ease; /* ホバー時のアニメーション */
   cursor: pointer; /* カーソルが指の形に変わる */
 }
 
 .home-button:hover {
-  background-color: #00cc00; /* 少し暗くして強調 */
+  background-color: #e65c00; /* 少し暗くして強調 */
   transform: translateY(-3px); /* 少し浮き上がる */
-  box-shadow: 0px 6px 18px rgba(0, 255, 0, 0.4); /* 影を強調 */
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.6); /* 影を強調 */
 }
